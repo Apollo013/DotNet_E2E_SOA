@@ -93,9 +93,17 @@ namespace CarRental.Client.Entities
         #endregion
 
         #region Validation
+        class RentalValidator : AbstractValidator<Rental>
+        {
+            public RentalValidator()
+            {
+                RuleFor(obj => obj.CarId).GreaterThan(0);
+                RuleFor(obj => obj.AccountId).GreaterThan(0);
+            }
+        }
         protected override IValidator GetValidator()
         {
-            throw new NotImplementedException();
+            return new RentalValidator();
         }
         #endregion
     }

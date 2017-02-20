@@ -17,10 +17,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataAccess", "DataAccess", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{610F5812-0314-44B5-BCBE-FC7BB4DFA7F1}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{1B7E87E6-890B-4663-8D43-BA3CA73730E6}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{2A9C5ACC-A92F-498C-86F1-ED031C75F38C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRental.Business.Entities", "CarRental.Business.Entities\CarRental.Business.Entities.csproj", "{DFE0CC7A-AB39-4991-B78D-C2485A3F70AD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRental.Client.Entities", "CarRental.Client.Entities\CarRental.Client.Entities.csproj", "{68214095-2A82-45C7-A687-8B2D4B369505}"
@@ -29,16 +25,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Common", "Core.Common\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Common.Contracts", "Core.Common.Contracts\Core.Common.Contracts.csproj", "{328A8883-435E-42AE-9EE3-C4FF36635871}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Common.Tests", "Core.Common.Tests\Core.Common.Tests.csproj", "{AD0BD6D1-3C89-4E38-AE19-4398301898DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2A9C5ACC-A92F-498C-86F1-ED031C75F38C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2A9C5ACC-A92F-498C-86F1-ED031C75F38C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2A9C5ACC-A92F-498C-86F1-ED031C75F38C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2A9C5ACC-A92F-498C-86F1-ED031C75F38C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DFE0CC7A-AB39-4991-B78D-C2485A3F70AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DFE0CC7A-AB39-4991-B78D-C2485A3F70AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFE0CC7A-AB39-4991-B78D-C2485A3F70AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -55,15 +49,19 @@ Global
 		{328A8883-435E-42AE-9EE3-C4FF36635871}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{328A8883-435E-42AE-9EE3-C4FF36635871}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{328A8883-435E-42AE-9EE3-C4FF36635871}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD0BD6D1-3C89-4E38-AE19-4398301898DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD0BD6D1-3C89-4E38-AE19-4398301898DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD0BD6D1-3C89-4E38-AE19-4398301898DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD0BD6D1-3C89-4E38-AE19-4398301898DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{2A9C5ACC-A92F-498C-86F1-ED031C75F38C} = {1B7E87E6-890B-4663-8D43-BA3CA73730E6}
 		{DFE0CC7A-AB39-4991-B78D-C2485A3F70AD} = {7C6D96DA-B1F1-4876-A5C2-C53AD7C07FA8}
 		{68214095-2A82-45C7-A687-8B2D4B369505} = {C2F690B2-EE80-4FF2-917E-00029ED875DC}
 		{AA3A9486-269A-486C-8138-6AB2B0112BA5} = {C964BFC2-E801-49FD-87B7-74DB68577D35}
 		{328A8883-435E-42AE-9EE3-C4FF36635871} = {C964BFC2-E801-49FD-87B7-74DB68577D35}
+		{AD0BD6D1-3C89-4E38-AE19-4398301898DF} = {610F5812-0314-44B5-BCBE-FC7BB4DFA7F1}
 	EndGlobalSection
 EndGlobal

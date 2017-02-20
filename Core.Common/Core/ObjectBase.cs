@@ -37,7 +37,7 @@ namespace Core.Common.Core
         /// Property Changed Event Handler that ensures multiple event handlers are not created for the same property
         /// </summary>
         private event PropertyChangedEventHandler _PropertyChanged;
-        protected event PropertyChangedEventHandler PropertyChanged
+        public event PropertyChangedEventHandler PropertyChanged
         {
             add
             {
@@ -239,7 +239,7 @@ namespace Core.Common.Core
         {
             get
             {
-                return (_ValidationErrors != null && _ValidationErrors.Count() > 0) ? false : true;
+                return (_ValidationErrors.Any()) ? false : true;
             }
         }
         #endregion

@@ -22,7 +22,7 @@ namespace CarRental.Client.Entities
             }
         }
 
-        private string _LoginEmail;
+        private string _LoginEmail = String.Empty;
 
         public string LoginEmail
         {
@@ -37,7 +37,7 @@ namespace CarRental.Client.Entities
             }
         }
 
-        private string _FirstName;
+        private string _FirstName = String.Empty;
 
         public string FirstName
         {
@@ -52,7 +52,7 @@ namespace CarRental.Client.Entities
             }
         }
 
-        private string _LastName;
+        private string _LastName = String.Empty;
 
         public string LastName
         {
@@ -67,7 +67,7 @@ namespace CarRental.Client.Entities
             }
         }
 
-        private string _Address;
+        private string _Address = String.Empty;
 
         public string Address
         {
@@ -82,7 +82,7 @@ namespace CarRental.Client.Entities
             }
         }
 
-        private string _City;
+        private string _City = String.Empty;
 
         public string City
         {
@@ -97,7 +97,7 @@ namespace CarRental.Client.Entities
             }
         }
 
-        private string _State;
+        private string _State = String.Empty;
 
         public string State
         {
@@ -112,7 +112,7 @@ namespace CarRental.Client.Entities
             }
         }
 
-        private string _ZipCode;
+        private string _ZipCode = String.Empty;
 
         public string ZipCode
         {
@@ -127,7 +127,7 @@ namespace CarRental.Client.Entities
             }
         }
 
-        private string _CreditCard;
+        private string _CreditCard = String.Empty;
 
         public string CreditCard
         {
@@ -142,7 +142,7 @@ namespace CarRental.Client.Entities
             }
         }
 
-        private string _ExpDate;
+        private string _ExpDate = String.Empty;
 
         public string ExpDate
         {
@@ -159,20 +159,22 @@ namespace CarRental.Client.Entities
         #endregion
 
         #region Validation
-        class CarValidator : AbstractValidator<Car>
+        class AccountValidator : AbstractValidator<Account>
         {
-            public CarValidator()
+            public AccountValidator()
             {
-                RuleFor(obj => obj.Description).NotEmpty();
-                RuleFor(obj => obj.Color).NotEmpty();
-                RuleFor(obj => obj.RentalPrice).GreaterThan(0);
-                RuleFor(obj => obj.Year).GreaterThan(2000).LessThanOrEqualTo(DateTime.Now.Year);
+                RuleFor(obj => obj.LoginEmail).NotEmpty();
+                RuleFor(obj => obj.FirstName).NotEmpty();
+                RuleFor(obj => obj.LastName).NotEmpty();
+                RuleFor(obj => obj.Address).NotEmpty();
+                RuleFor(obj => obj.State).NotEmpty();
+                RuleFor(obj => obj.ZipCode).NotEmpty();
             }
         }
 
         protected override IValidator GetValidator()
         {
-            return new CarValidator();
+            return new AccountValidator();
         }
         #endregion
     }

@@ -22,7 +22,7 @@ namespace CarRental.Client.Entities
             }
         }
 
-        private string _Description;
+        private string _Description = String.Empty;
 
         public string Description
         {
@@ -37,7 +37,7 @@ namespace CarRental.Client.Entities
             }
         }
 
-        private string _Color;
+        private string _Color = String.Empty;
 
         public string Color
         {
@@ -99,9 +99,20 @@ namespace CarRental.Client.Entities
         #endregion
 
         #region Validation
+        class CarValidator : AbstractValidator<Car>
+        {
+            public CarValidator()
+            {
+                RuleFor(obj => obj.Description).NotEmpty();
+                RuleFor(obj => obj.Color).NotEmpty();
+                RuleFor(obj => obj.RentalPrice).GreaterThan(0);
+                RuleFor(obj => obj.Year).GreaterThan(2000).LessThanOrEqualTo(DateTime.Now.Year);
+            }
+        }
+
         protected override IValidator GetValidator()
         {
-            throw new NotImplementedException();
+            return new CarValidator();
         }
         #endregion
     }
